@@ -1,0 +1,73 @@
+# dbt project .gitignore (under transformation_project/)
+
+# Compiled dbt artifacts
+transformation_project/target/
+transformation_project/dbt_packages/
+transformation_project/dbt_modules/  # Deprecated, but include for older projects
+transformation_project/logs/  # dbt logs
+transformation_project/.dbt_shell
+transformation_project/.dbt/
+
+# Credentials
+transformation_project/profiles.yml
+transformation_project/.env
+transformation_project/.secrets*
+transformation_project/secrets.yml
+
+# IDE specific files (if outside transformation_project - keep outside to be comprehensive for the whole repo)
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+*.tmp
+
+# Python artifacts
+transformation_project/__pycache__/
+transformation_project/*.py[cod]
+transformation_project/*.egg-info/
+transformation_project/.pytest_cache/
+transformation_project/.venv/
+transformation_project/venv/
+transformation_project/env/
+transformation_project/dist/
+transformation_project/build/
+
+# OS generated files (if outside transformation_project - keep outside to be comprehensive for the whole repo)
+.DS_Store
+Thumbs.db
+
+# Data/Sample Data (Consider carefully before excluding)
+# transformation_project/data/  # Only exclude if your data directory contains large or sensitive data
+# transformation_project/samples/ # Same as above
+
+# dbt Cloud IDE specific files (if applicable)
+# transformation_project/.dbt-cloud-workspace/  # Exclude if you have sensitive info inside
+# transformation_project/.dbt-cloud/
+# transformation_project/.dbt-cloud-user/
+
+# Other
+transformation_project/*.log
+transformation_project/*.out
+transformation_project/*.bak
+transformation_project/*.old
+transformation_project/*.orig
+.user.yml
+
+# Git LFS (if using)
+# .gitattributes
+
+# Terraform state (if using terraform for infrastructure)
+# terraform.tfstate
+# terraform.tfstate.backup
+
+# For auto-generated documentation (if any)
+# transformation_project/docs/
+# transformation_project/site/
+
+# Exclude any database specific metadata files
+# transformation_project/.redshift_metadata/
+
+# Ignore any files containing sensitive data (use with caution and be specific)
+# transformation_project/my_sensitive_file.csv
+# transformation_project/config.ini

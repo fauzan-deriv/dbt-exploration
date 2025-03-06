@@ -1,0 +1,13 @@
+transformation_project:
+  outputs:
+    dev:
+      dataset: development
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      method: oauth # this is for development purpose. For production, better to use service_account with specific access level
+      priority: interactive
+      project: business-intelligence-240201
+      threads: 1
+      type: bigquery
+      location: asia-southeast1
+  target: dev

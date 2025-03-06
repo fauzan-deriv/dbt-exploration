@@ -1,0 +1,14 @@
+
+version: 2
+
+models:
+  - name: login_balance
+    description: "A sample dbt model for login_balance"
+    columns:
+      - name: login
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+      - name: balance
+        description: "The balance of the account"
